@@ -1,4 +1,5 @@
 // finding smallest element and putting it at the beginning of the array
+// Time: O(n^2)
 function selectionSort(arr){
 // store first element as smallest value we've seen so far
 // compare this item to the next item in the array until we find smaller num
