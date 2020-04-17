@@ -28,9 +28,7 @@ class Student {
 }
 
 const Alex = new Student("Alex", "Bednarek", 24);
-const Eli = new Student("Eli", "Gallipoli", 25);
 
-console.log(Eli);
 Alex.addScore(93);
 Alex.addScore(90);
 Alex.addScore(95);
