@@ -9,33 +9,33 @@
  * Return minimal length of contiguous subarray of which the sum is greater than or equal to the number passed 
  in as an argument. If there isn't one, return 0
  */
-function minSubArrayLen(nums, sum) {
-    let total = 0;
-    let start = 0;
-    let end = 0;
-    let minLen = Infinity;
+// function minSubArrayLen(nums, sum) {
+//     let total = 0;
+//     let start = 0;
+//     let end = 0;
+//     let minLen = Infinity;
    
-    while (start < nums.length) {
-      // if current window doesn't add up to the given sum then 
-          // move the window to right
-      if(total < sum && end < nums.length){
-        total += nums[end];
-              end++;
-      }
-      // if current window adds up to at least the sum given then
-          // we can shrink the window 
-      else if(total >= sum){
-        minLen = Math.min(minLen, end-start);
-              total -= nums[start];
-              start++;
-      } 
-      // current total less than required total but we reach the end, need this or else we'll be in an infinite loop 
-      else {
-        break;
-      }
-    }
-    return minLen === Infinity ? 0 : minLen;
-  }
+//     while (start < nums.length) {
+//       // if current window doesn't add up to the given sum then 
+//           // move the window to right
+//       if(total < sum && end < nums.length){
+//         total += nums[end];
+//               end++;
+//       }
+//       // if current window adds up to at least the sum given then
+//           // we can shrink the window 
+//       else if(total >= sum){
+//         minLen = Math.min(minLen, end-start);
+//               total -= nums[start];
+//               start++;
+//       } 
+//       // current total less than required total but we reach the end, need this or else we'll be in an infinite loop 
+//       else {
+//         break;
+//       }
+//     }
+//     return minLen === Infinity ? 0 : minLen;
+//   }
 
 
 /**
@@ -45,18 +45,18 @@ function minSubArrayLen(nums, sum) {
  * Time: O(n)
  * Space: O(1)
  */
-// function isSubsequence(str1, str2) {
-//     var i = 0;
-//     var j = 0;
-//     if (!str1) return true;
-//     while (j < str2.length) {
-//       if (str2[j] === str1[i]) i++;
-//       if (i === str1.length) return true;
-//       j++;
-//     }
-//     return false;
-//   }
-//   console.log(isSubsequence('abc','abracadabra'))
+function isSubsequence(str1, str2) {
+    var i = 0;
+    var j = 0;
+    if (!str1) return true;
+    while (j < str2.length) {
+      if (str2[j] === str1[i]) i++;
+      if (i === str1.length) return true;
+      j++;
+    }
+    return false;
+  }
+  console.log(isSubsequence('abc','abracadabra'))
 
  /**
   * Write function maxSubarraySum which accepts an array of integers and a number n
@@ -106,3 +106,5 @@ function minSubArrayLen(nums, sum) {
 //     return maxSum;
 //  }
 //  console.log(maxSubArray([2, 6, 9, 2, 1, 8, 5, 6, 3], 3));
+
+
