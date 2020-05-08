@@ -9,7 +9,23 @@ All words are delimited by space.
 Example : If s =" I am using computer to improve my work" 
       and    t="am computer to improve", then the output of missing words should be 
       : "I using my work"
+
+
+Python is an easy to learn powerful programming language It has efficient high-level data structures and a simple but effective approach to objectoriented programming Python elegant syntax and dynamic typing
+
+Python is an easy to learn powerful programming language
  */
+
+
+ /**
+  * 
+  * @Alex I used a hash map and added 1 to the value of each key value pair. 
+  * then itterated over the s string and checked to see if the value for that key was not 1. 
+  * if it was 2 that means the word is in there 
+  * more than once so i skip over it and subtract 1 from the value 
+  * so it gets pushed in next time
+  */
+ //USE A HASHMAP
 function missingWords(s, t){
     // split on the space to get an array
     //create a set from both arrays
@@ -26,3 +42,49 @@ function missingWords(s, t){
   }
   
   console.log(missingWords("I am using computer to improve my work", "am computer to improve"))
+
+  /**
+   * Your Output (stdout)
+It
+has
+efficient
+high-level
+data
+structures
+and
+a
+simple
+but
+effective
+approach
+objectoriented
+elegant
+syntax
+and
+dynamic
+typing
+
+********Expected Output
+
+It
+has
+efficient
+high-level
+data
+structures
+and
+a
+simple
+but
+effective
+approach
+to
+objectoriented
+programming
+Python
+elegant
+syntax
+and
+dynamic
+typing
+   */
