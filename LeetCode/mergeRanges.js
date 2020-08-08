@@ -25,7 +25,7 @@ Then we walk through our sorted meetings from left to right. At each step, eithe
     const sortedMeetings = meetings.sort((a, b)=> {
         return a.startTime - b.startTime
     })
-    
+    console.log('sorted meetings: ', sortedMeetings)
     // Initialize merged meetings with sorted meetings
     const mergedMeetings = [sortedMeetings[0]]
     for(let i = 0; i<sortedMeetings.length; i+=1) {
